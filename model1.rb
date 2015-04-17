@@ -1,8 +1,8 @@
 class Dog
-  attr_accessor :
-  def initialize(name, breed)
-    @name = name
-    @breed = breed
-    # let's turn this into an argument order independent hash later...
+  attr_reader :name, :breed, :color
+  def initialize(args = {})
+    @name = args[:name]
+    @breed = args[:breed]
+    @color = args[:color]
   end
 end
